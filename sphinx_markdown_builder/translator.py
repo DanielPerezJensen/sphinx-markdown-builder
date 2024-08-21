@@ -327,7 +327,7 @@ class MarkdownTranslator(SphinxTranslator):  # pylint: disable=too-many-public-m
         alt = node.attributes.get("alt", "image")
         # We don't need to add EOL before/after the image.
         # It will be handled by the visit/depart handlers of the paragraph.
-        self.add(f"![{alt}]({uri})")
+        self.add(f"![{alt}](/{uri})")
 
     # noinspection PyPep8Naming
     def visit_Text(self, node):  # pylint: disable=invalid-name
